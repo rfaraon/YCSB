@@ -583,7 +583,7 @@ public class CoreWorkload extends Workload {
     HashMap<String, ByteIterator> values = buildValues(dbkey);
 
     Status status;
-    int numOfRetries = 0;
+    int numOfRetries = 1;
     do {
       status = db.insert(table, dbkey, values);
       if (null != status && status.isOk()) {
